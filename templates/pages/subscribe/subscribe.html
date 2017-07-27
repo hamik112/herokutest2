@@ -1,0 +1,26 @@
+<!-- extend base layout -->
+{% extends "adminlte/base.html" %}
+
+{% block content -%}
+         {% if sessid %}
+          <h4 class="page-header">
+             Subscribe
+            <small>Account: {{ currentacc | safe }}</small>
+
+          <!-- Small boxes (Stat box) -->
+
+          <small> <a href={{ url }} target="popup" onclick="window.open( {{ url }},'Subscribe','width=600,height=400')">Click this link to sign in eBay and accept. Click the next button after.</a>
+         </small>
+               </h4>
+
+        <form action="/killerapp/subscribe2/" method="post">
+        <input type='hidden' name='sessid' value={{ sessid }} />
+        <button type="submit" class="btn btn-default">Next</button>
+    </form>
+    {% else %}
+    <h1>Error getting SessionID! Call Dennis!</h1>
+        {% endif %}
+
+
+
+{%- endblock content %}

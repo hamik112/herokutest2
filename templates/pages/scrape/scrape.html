@@ -1,0 +1,92 @@
+{% extends "adminlte/base.html" %}
+
+{% block content -%}
+{% block body %}
+<div class="row">
+    <!-- /.box -->
+    <!-- general form elements disabled -->
+<form method="POST">
+
+    <div class="col-md-6">
+        <div class="box box-danger">
+            <div class="box-header with-border">
+                <h3 class="box-title">Options</h3>
+            </div>
+            <!-- /.box-header -->
+
+            <div class="box-body">
+                <div class="callout callout-warning">
+                    <p>Only change template and weight options if you don't know what you're doing.</p>
+                </div>
+                        <!-- checkbox -->
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label>
+                                    {{ scraperListForm.titleOption() }}
+                                    Don't use title blacklist
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    {{ scraperListForm.brandOption() }}
+                                    Don't use brand blacklist
+                                </label>
+                            </div>
+
+                              <div class="checkbox">
+                                <label>
+                                    {{ scraperListForm.ignoreActiveOption() }}
+                                    Ignore if item is already listed
+                                </label>
+                            </div>
+                        </div>
+
+                         <div class="form-group">
+
+                                <label>Max shipping weight (lbs) </label>
+                                    {{ scraperListForm.maxWeight(class_='form-control', value='7.00') }}
+                            </div>
+
+                        <!-- select -->
+                        <div class="form-group">
+                            <label>Description template</label>
+                            {{ scraperListForm.template_id(class_='form-control') }}
+                        </div>
+
+            </div>
+
+            <!-- /.box-body -->
+        </div>
+    </div>
+    <!-- /.box -->
+       <div class="col-md-6">
+        <div class="box box-warning">
+            <div class="box-header with-border">
+                <h3 class="box-title">Scrape ASIN list</h3>
+            </div>
+            <!-- /.box-header -->
+
+            <div class="box-body">
+<div class="callout callout-info">
+
+                <p>Insert a list of ASINS separated by newline.</p>
+              </div>
+                        <div class="form-group">
+
+                            {{ scraperListForm.asin(cols="30", rows="10",class_='form-control') }}
+
+                        </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+
+            </div>
+
+            <!-- /.box-body -->
+        </div>
+    </div>
+
+</form>
+</div>
+
+{% endblock %}
+
+{%- endblock content %}

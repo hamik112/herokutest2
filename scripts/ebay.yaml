@@ -1,0 +1,25 @@
+name: ebay_api_config
+
+# Trading API Sandbox - https://www.x.com/developers/ebay/products/trading-api
+api.sandbox.ebay.com:
+    compatability: 971
+    appid: DennisNg-9cec-4bc2-8047-86aba21ddc04
+    certid: ab1e9dab-c716-4887-8fb1-9dbb0789ae32
+    devid: 730f8691-d146-4e9a-9d59-6a54a3835d9d
+
+# Trading API - https://www.x.com/developers/ebay/products/trading-api
+api.ebay.com:
+    compatability: 971
+    appid: DennisNg-9cec-4bc2-8047-86aba21ddc04
+    certid: ab1e9dab-c716-4887-8fb1-9dbb0789ae32
+    devid: 730f8691-d146-4e9a-9d59-6a54a3835d9d
+
+# Finding API - https://www.x.com/developers/ebay/products/finding-api
+svcs.ebay.com:
+    appid: DennisNg-9cec-4bc2-8047-86aba21ddc04
+    version: 1.0.0
+
+# Shopping API - https://www.x.com/developers/ebay/products/shopping-api
+open.api.ebay.com:
+    appid: DennisNg-9cec-4bc2-8047-86aba21ddc04
+    version: 671
